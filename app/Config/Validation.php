@@ -65,7 +65,7 @@ class Validation extends BaseConfig
 
     public $update_user = [
         'username' => [
-            'rules' => 'required|min_length[5]|is_unique[users.username,id,{id}]',
+            'rules' => 'required|min_length[5]|is_unique[users.username,id,{$id}]',
         ],
         'password' => [
             'rules' => 'required',

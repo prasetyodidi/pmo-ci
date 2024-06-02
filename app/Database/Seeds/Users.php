@@ -8,7 +8,6 @@ class Users extends Seeder
 {
     public function run()
     {
-        //lakukan perulangan data
         for ($i = 0; $i < 10; $i++) {
             $data = [
                 [
@@ -28,12 +27,7 @@ class Users extends Seeder
                     'age' => '17'
                 ]
             ];
-            // insert semua data ke tabel
             $this->db->table('users')->insertBatch($data);
-            //singgle insert
-            //->insert($data);
-            //multiple insert
-            //->insertBatch($data);
         }
     }
 }
